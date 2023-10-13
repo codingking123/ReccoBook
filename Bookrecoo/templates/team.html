@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Recommendation</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700;900&family=Ubuntu&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cd7ef8daf9.js" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+body{
+    font-family: "Montserrat";
+    background-color: #020F1E;
+    color: #fff;
+    /* background-position-y: 0; */
+}
+#title{
+    background-color: #020F1E;
+    color: #fff;
+
+}
+h1{
+    font-family: "Montserrat";
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1.5;
+}
+.container-fluid{
+    padding: 0% 15% 0%;
+}
+
+.navbar{
+    padding:0 0 4.5rem;
+}
+
+.navbar-brand{
+    font-family: "Ubuntu";
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.navbar-item{
+    padding:0 18px;
+    
+}
+.nav-link{
+    font-size: 1.2rem;
+    font-family: "Montserrat";
+}
+/* .title-image{
+    width: 20%;
+    transform: rotate(25deg);
+    position: absolute;
+
+
+} */
+.main-image{
+    width: 100%;
+    height: 670px;
+    margin-top: -5%;
+    z-index: -1;
+}
+.image h1{
+    z-index: -1;
+    margin-top: -25%;
+    text-align: left;
+    padding-left: 15%;
+}
+
+.rowimage{
+    width: 200px;
+    height: 200px;
+    /* padding: 10%; */
+    border-radius: 50%;
+    margin-top: 10%;
+    box-shadow: 0 4px 8px 0 rgba(214, 144, 101, 0.2), 0 6px 20px 0 rgba(214, 144, 101, 0.2);
+}
+#books{
+    margin-top: 20%;
+}
+.nameofbooks{
+    padding: 5% 0% 10% 0%;
+}
+.nameofbooks h3{
+    font-size: 25px;
+}
+.nameofbooks p{
+    opacity: 70%;
+    padding-left: 5%;
+    font-size: 18px;
+    list-style: 0.6;
+}
+.nameofbooks i{
+    text-decoration: none;
+    padding: 0% 5%;
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+}
+.nameofbooks i:hover{
+    color: rgb(2, 198, 252);
+}
+.col-md-3{
+    margin: 5% 2% 5%;
+    padding-left: 2%;
+    width: 240px;
+    height: 430px;
+    background: #020F1E;
+    box-shadow: -2px -2px 10px 5px rgba(255, 255, 255, 0.36), 7px 7px 10px 1px rgba(227, 229, 232, 0.36);
+    border-radius: 20px;
+    transition-duration: 1s;
+}
+.col-md-3:hover{
+    margin: 5% 2% 5%;
+    width: 260px;
+    height: 460px;
+    background: #020F1E;
+    box-shadow: -2px -2px 10px 5px rgba(0, 251, 255, 0.763), 7px 7px 10px 1px rgba(227, 229, 232, 0.36);
+    border-radius: 20px;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+}
+/* footer */
+#footer{
+    background-color: #000000;
+}
+.contactus h2{
+    font-size: 25px;
+}
+.contactus i{
+    display: inline-block;
+    padding: 2% 5%;
+    font-size: 25px;
+    text-decoration: none;
+    color: #fff;
+}
+.remove{
+    text-decoration: none;
+}
+.contactus i:hover{
+    color: aqua;
+}
+.brandandpolicy p{
+    opacity: 70%;
+    line-height: 0.5;
+}
+.brandandpolicy h3{
+    font-size: 18px;
+    opacity: 50%;
+    padding: 3% 0% 2% 0%;
+}
+.row1{
+    display: flex;
+}
+.signinpart{
+    padding: 5% 0% 0% 10%;
+}
+.signinpart h2{
+    font-size: 25px;
+    opacity: 70%;
+}
+.form_search{
+    padding: 2% 0% 5% 0%;
+}
+.inputbox{
+    margin-top: 0%;
+    width: 534px;
+    height: 50.08px;
+    color: #fff;
+    background: #020F1E;
+    box-shadow: 5px 5px 10px 1px rgba(255, 255, 255, 0.45);
+    border-radius: 50px;
+}
+.submit_button{
+    margin-top: 3%;
+    width: 160px;
+    height: 50px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    background: #020F1E;
+    box-shadow: 7px 7px 10px 1px rgba(249, 249, 249, 0.25);
+    border-radius: 50px;
+}
+.submit_button:hover{
+    margin-top: 3%;
+    width: 160px;
+    height: 50px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: 700;
+    background: #ffffff;
+    box-shadow: 7px 7px 10px 1px rgba(85, 4, 4, 0.25);
+    border-radius: 50px;
+}
+
+@media screen and (max-width:800px){
+    .main-image{
+        max-width: 100%;
+        height: auto;
+    }
+    .image h1{
+        margin-top: -50%;
+        
+    }
+    .rowimage{
+        max-width: 300px;
+    height: 300px;
+    }
+    #books{
+        margin-top: 40%;
+    }
+    .container{
+    padding: 1% 10% 1%;
+}
+}
+@media screen and (max-width:400px){
+    #books{
+        margin-top: 10%;
+    }
+    .image h1{
+        font-size: 50px;
+    }
+}
+
+</style>
+
+<body>
+    <section id="title">
+
+        <div class="container-fluid">
+    
+        <!-- Nav Bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark  ">
+        <a class="navbar-brand" href="">ReccoBook</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menubar" aria-controls="menubar" aria-expanded="false" aria-label="Toggel navigation" >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menubar">
+            <ul class="navbar-nav ms-auto">
+            <li class="navbar-item">
+                <a class="nav-link" href="/">Home</a> 
+            </li>
+            <li class="navbar-item">
+                <a class="nav-link" href="/team">Team</a>
+            </li>
+            <li class="navbar-item">
+                <a class="nav-link" href="/recommend">Books</a>
+            </li>
+            </ul>
+        </div>
+        </nav>
+
+    </div>
+    
+    </section>
+    <div class="image">
+        <img class="main-image" src="https://images.pexels.com/photos/397998/pexels-photo-397998.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="mainimage">
+        <h1>Team Of reccobook</h1>
+    </div>
+
+    <section id="books">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <img class="rowimage" src="https://lh3.googleusercontent.com/a/ALm5wu1hlZynuUw97icpgqqUPkXa9bKpw2pPgh3g57s31A=s360-p-rw-no" alt="">
+                    <div class="nameofbooks">
+                        <h3>Yuvraj Chulpar</h3>
+                    <p>contact us</p>
+                    <a href="https://www.linkedin.com/in/yuvraj-chulpar-660b71218/">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-instagram"></i>
+                        <a href="mailto:chulparyuvraj38@gmail.com? subject=subject text">
+                        <i class="fa fa-envelope"></i>
+                    </a>
+                    </div>
+                    
+                </div>
+                <div class="col-md-3">
+                    <img class="rowimage" src="https://pps.whatsapp.net/v/t61.24694-24/300114362_786183442627333_2370826382138660407_n.jpg?ccb=11-4&oh=01_AdTjyjygPUt6ZV1CsFBFfWo4HgZCypq7g3v-qMhTKBXu6g&oe=63975F9F" alt="">
+                    <div class="nameofbooks">
+                        <h3>Gaurav Yelure</h3>
+                    <p>contact us</p>
+                    <a href="https://www.linkedin.com/in/yuvraj-chulpar-660b71218/">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-instagram"></i>
+                        <a href="mailto:chulparyuvraj38@gmail.com? subject=subject text">
+                        <i class="fa fa-envelope"></i>
+                    </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <img class="rowimage" src="https://pps.whatsapp.net/v/t61.24694-24/310976639_689305019232049_289983841931657027_n.jpg?ccb=11-4&oh=01_AdQqoeQ4zfqoKEMTheT4CjzsEORILTgRFVY7oftV2NmlZQ&oe=63A2A22C" alt="">
+                    <div class="nameofbooks">
+                        <h3>Pranav Bhoshle</h3>
+                    <p>contact us</p>
+                    <a href="https://www.linkedin.com/in/yuvraj-chulpar-660b71218/">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-instagram"></i>
+                        <a href="mailto:chulparyuvraj38@gmail.com? subject=subject text">
+                        <i class="fa fa-envelope"></i>
+                    </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <img class="rowimage" src="https://pps.whatsapp.net/v/t61.24694-24/309788866_635848274665614_4705761078638879175_n.jpg?ccb=11-4&oh=01_AdTqKtuDkhXHi5zLKq5hhkPeYg2ZE-apJAnGRfH5z-8hAA&oe=6397650C" alt="">
+                    <div class="nameofbooks">
+                        <h3>Adesh Gawai</h3>
+                    <p>contact us</p>
+                    <a href="https://www.linkedin.com/in/yuvraj-chulpar-660b71218/">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-instagram"></i>
+                        <a href="mailto:chulparyuvraj38@gmail.com? subject=subject text">
+                        <i class="fa fa-envelope"></i>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <section id="footer">
+        <div class="allitem">
+            <div class="container">
+            <div class="row1">
+                <div class="col-lg-6">
+                    <div class="brandandpolicy">
+                        <h1>ReccoBook</h1>
+                        <p>Terms of Use . Privacy Policy . Accessibility Policy . FAQ . </p>
+                        <p>Become an Affiliate . Reviews . Jobs . Track Orders . Store Locator .</p><br>
+                        <div class="contactus">
+                            <h2>Contact Us
+                        <a href="https://www.linkedin.com/in/yuvraj-chulpar-660b71218/">
+                            <i class="fa fa-linkedin remove"></i>
+                        </a>
+                            <i class="fa fa-facebook"></i>
+                            <i class="fa fa-instagram"></i>
+                            <a href="mailto:chulparyuvraj38@gmail.com? subject=subject text">
+                            <i class="fa fa-envelope"></i>
+                        </a></h2>
+                        </div>
+                        <h3>© Copyright ReccoBook</h3>
+                    </div>
+                </div>
+                    <div class="col-lg-6">
+                        <div class="signinpart">
+                            <h2>Don't miss the newly add Books :</h2>
+                            <form class="form_search" action="/signin" method="post">
+                            <input class="inputbox"  name="user_email" type="text" placeholder="   Enter Your Email"><br>
+                            <input class="submit_button" type="submit">
+                            </form>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+        </div>
+    </section>
+
+    
+</body>
+</html>
